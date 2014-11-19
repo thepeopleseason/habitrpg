@@ -12,7 +12,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
   config.vm.usable_port_range = (3000..3050)
   config.vm.provision :shell, :path => "vagrant.sh"
-
-  # Windows users will want to remove the '# ' preceding the next line:
-  # config.vm.communicator = "winrm"
 end
